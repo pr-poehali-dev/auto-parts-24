@@ -164,6 +164,7 @@ const Index = () => {
             <nav className="hidden md:flex items-center gap-6">
               <a href="#catalog" className="hover:text-[#0EA5E9] transition-colors">Каталог</a>
               <a href="#promo" className="hover:text-[#0EA5E9] transition-colors">Акции</a>
+              <a href="#team" className="hover:text-[#0EA5E9] transition-colors">Команда</a>
               <a href="#delivery" className="hover:text-[#0EA5E9] transition-colors">Доставка</a>
               <Sheet open={chatOpen} onOpenChange={setChatOpen}>
                 <SheetTrigger asChild>
@@ -411,6 +412,81 @@ const Index = () => {
               <h3 className="text-xl font-semibold mb-2 text-foreground">Гарантия качества</h3>
               <p className="text-muted-foreground">Все товары сертифицированы</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" className="bg-background py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-4 text-foreground">Наша команда</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Профессионалы, которые работают для вашего комфорта и быстрого обслуживания
+          </p>
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <Card className="text-center hover:shadow-xl transition-all hover:border-primary/50">
+              <CardHeader>
+                <div className="w-24 h-24 bg-gradient-to-br from-[#0EA5E9] to-[#0284C7] rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Icon name="Crown" size={40} className="text-white" />
+                </div>
+                <CardTitle className="text-lg">Алексей Петров</CardTitle>
+                <p className="text-sm text-[#0EA5E9] font-semibold">Администратор / Собственник</p>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Управляет бизнесом и стратегическим развитием компании</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-xl transition-all hover:border-primary/50">
+              <CardHeader>
+                <div className="w-24 h-24 bg-gradient-to-br from-[#0EA5E9] to-[#0284C7] rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Icon name="ShoppingBag" size={40} className="text-white" />
+                </div>
+                <CardTitle className="text-lg">Мария Соколова</CardTitle>
+                <p className="text-sm text-[#0EA5E9] font-semibold">Менеджер по закупкам</p>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Обеспечивает наличие качественных запчастей на складе</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-xl transition-all hover:border-primary/50">
+              <CardHeader>
+                <div className="w-24 h-24 bg-gradient-to-br from-[#0EA5E9] to-[#0284C7] rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Icon name="Headphones" size={40} className="text-white" />
+                </div>
+                <CardTitle className="text-lg">Дмитрий Иванов</CardTitle>
+                <p className="text-sm text-[#0EA5E9] font-semibold">Специалист техподдержки</p>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Консультирует клиентов и решает технические вопросы</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-xl transition-all hover:border-primary/50">
+              <CardHeader>
+                <div className="w-24 h-24 bg-gradient-to-br from-[#0EA5E9] to-[#0284C7] rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Icon name="Bike" size={40} className="text-white" />
+                </div>
+                <CardTitle className="text-lg">Сергей Морозов</CardTitle>
+                <p className="text-sm text-[#0EA5E9] font-semibold">Курьер</p>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Доставляет заказы быстро и в сохранности</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-xl transition-all hover:border-primary/50">
+              <CardHeader>
+                <div className="w-24 h-24 bg-gradient-to-br from-[#0EA5E9] to-[#0284C7] rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Icon name="Calculator" size={40} className="text-white" />
+                </div>
+                <CardTitle className="text-lg">Елена Крылова</CardTitle>
+                <p className="text-sm text-[#0EA5E9] font-semibold">Бухгалтер-фрилансер</p>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Ведёт финансовый учёт и отчётность компании</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
