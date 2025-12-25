@@ -57,7 +57,7 @@ const Index = () => {
       brand: 'Mann Filter',
       carModel: 'Toyota Camry',
       price: 850,
-      image: '/placeholder.svg',
+      image: 'https://cdn.poehali.dev/projects/a0035e46-2cd8-4174-991c-61fa01b114f4/files/3c81218c-eb11-470e-9458-fa28a4427f96.jpg',
       inStock: true,
       warranty: '6 месяцев',
       characteristics: {
@@ -74,7 +74,7 @@ const Index = () => {
       carModel: 'Hyundai Solaris',
       price: 4200,
       oldPrice: 4800,
-      image: '/placeholder.svg',
+      image: 'https://cdn.poehali.dev/projects/a0035e46-2cd8-4174-991c-61fa01b114f4/files/e78a3d07-8517-437d-aee5-ea10bc85904a.jpg',
       inStock: false,
       warranty: '24 месяца',
       characteristics: {
@@ -90,7 +90,7 @@ const Index = () => {
       brand: 'NGK',
       carModel: 'Volkswagen Polo',
       price: 1200,
-      image: '/placeholder.svg',
+      image: 'https://cdn.poehali.dev/projects/a0035e46-2cd8-4174-991c-61fa01b114f4/files/ee296403-1f22-4d70-9fbb-1aa8023f1a59.jpg',
       inStock: true,
       warranty: '12 месяцев',
       characteristics: {
@@ -107,7 +107,7 @@ const Index = () => {
       carModel: 'Renault Logan',
       price: 650,
       oldPrice: 900,
-      image: '/placeholder.svg',
+      image: 'https://cdn.poehali.dev/projects/a0035e46-2cd8-4174-991c-61fa01b114f4/files/bb80459e-3366-4f04-a8b1-d193d4a97e8f.jpg',
       inStock: true,
       warranty: '6 месяцев',
       characteristics: {
@@ -123,7 +123,7 @@ const Index = () => {
       brand: 'ATE',
       carModel: 'Skoda Octavia',
       price: 3800,
-      image: '/placeholder.svg',
+      image: 'https://cdn.poehali.dev/projects/a0035e46-2cd8-4174-991c-61fa01b114f4/files/c93931b3-d84a-4a96-8578-95db783397db.jpg',
       inStock: true,
       warranty: '18 месяцев',
       characteristics: {
