@@ -153,8 +153,8 @@ const Index = () => {
   const brands = ['all', ...Array.from(new Set(parts.map(p => p.brand)))];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-[#1A1F2C] text-white sticky top-0 z-50 shadow-lg">
+    <div className="min-h-screen bg-background">
+      <header className="bg-[#0F1419] text-white sticky top-0 z-50 shadow-lg border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -178,9 +178,9 @@ const Index = () => {
                   </SheetHeader>
                   <div className="flex flex-col h-[calc(100%-80px)] mt-6">
                     <div className="flex-1 space-y-4 overflow-y-auto mb-4">
-                      <div className="bg-gray-100 p-3 rounded-lg max-w-[80%]">
-                        <p className="text-sm">Здравствуйте! Чем могу помочь?</p>
-                        <span className="text-xs text-gray-500">10:30</span>
+                      <div className="bg-muted p-3 rounded-lg max-w-[80%]">
+                        <p className="text-sm text-foreground">Здравствуйте! Чем могу помочь?</p>
+                        <span className="text-xs text-muted-foreground">10:30</span>
                       </div>
                     </div>
                     <div className="flex gap-2">
@@ -197,17 +197,17 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="bg-gradient-to-r from-[#1A1F2C] to-[#0EA5E9] text-white py-16">
+      <section className="bg-gradient-to-r from-[#0F1419] via-[#1A1F2C] to-[#0EA5E9] text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-4">Найдите нужную запчасть быстро</h2>
             <p className="text-lg mb-8 opacity-90">Широкий ассортимент для отечественных и иномарок</p>
-            <div className="flex gap-2 bg-white rounded-lg p-2">
+            <div className="flex gap-2 bg-card rounded-lg p-2 border border-border">
               <Input
                 placeholder="Поиск по названию, артикулу или марке..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="flex-1 border-0 focus-visible:ring-0 text-gray-800"
+                className="flex-1 border-0 focus-visible:ring-0 bg-transparent text-foreground placeholder:text-muted-foreground"
               />
               <Button className="bg-[#0EA5E9] hover:bg-[#0284C7]">
                 <Icon name="Search" size={20} />
@@ -218,13 +218,13 @@ const Index = () => {
       </section>
 
       <div id="promo" className="container mx-auto px-4 py-8">
-        <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-xl p-8 mb-8">
+        <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-xl p-8 mb-8 shadow-lg border border-red-500/30">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div>
               <h3 className="text-2xl font-bold mb-2">🔥 Горящие акции недели!</h3>
               <p className="text-lg">Скидки до 40% на тормозные системы и фильтры</p>
             </div>
-            <Button size="lg" variant="secondary" className="bg-white text-red-600 hover:bg-gray-100">
+            <Button size="lg" variant="secondary" className="bg-white text-red-600 hover:bg-gray-100 font-semibold">
               Смотреть всё
             </Button>
           </div>
@@ -233,7 +233,7 @@ const Index = () => {
 
       <main id="catalog" className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-3xl font-bold text-[#1A1F2C]">Каталог запчастей</h2>
+          <h2 className="text-3xl font-bold text-foreground">Каталог запчастей</h2>
           <div className="flex items-center gap-4">
             <Select value={selectedBrand} onValueChange={setSelectedBrand}>
               <SelectTrigger className="w-[200px]">
@@ -261,7 +261,7 @@ const Index = () => {
                   <DialogTitle>Сравнение запчастей</DialogTitle>
                 </DialogHeader>
                 {compareList.length === 0 ? (
-                  <p className="text-center py-8 text-gray-500">Добавьте товары для сравнения</p>
+                  <p className="text-center py-8 text-muted-foreground">Добавьте товары для сравнения</p>
                 ) : (
                   <div className="overflow-x-auto">
                     <table className="w-full">
@@ -327,7 +327,7 @@ const Index = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredParts.map(part => (
-            <Card key={part.id} className="hover:shadow-xl transition-shadow">
+            <Card key={part.id} className="hover:shadow-xl transition-all hover:border-primary/50 bg-card">
               <CardHeader>
                 <div className="relative">
                   <img src={part.image} alt={part.name} className="w-full h-48 object-cover rounded-lg" />
@@ -340,8 +340,8 @@ const Index = () => {
                     <Badge className="absolute top-2 left-2 bg-gray-500">Под заказ</Badge>
                   )}
                 </div>
-                <CardTitle className="text-lg mt-4">{part.name}</CardTitle>
-                <p className="text-sm text-gray-500">Артикул: {part.article}</p>
+                <CardTitle className="text-lg mt-4 text-foreground">{part.name}</CardTitle>
+                <p className="text-sm text-muted-foreground">Артикул: {part.article}</p>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
@@ -360,9 +360,9 @@ const Index = () => {
                 </div>
                 <div className="mt-4">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-bold text-[#1A1F2C]">{part.price} ₽</span>
+                    <span className="text-2xl font-bold text-foreground">{part.price} ₽</span>
                     {part.oldPrice && (
-                      <span className="text-sm text-gray-400 line-through">{part.oldPrice} ₽</span>
+                      <span className="text-sm text-muted-foreground line-through">{part.oldPrice} ₽</span>
                     )}
                   </div>
                 </div>
@@ -386,36 +386,36 @@ const Index = () => {
         </div>
       </main>
 
-      <section id="delivery" className="bg-white py-16 mt-16">
+      <section id="delivery" className="bg-card py-16 mt-16 border-y border-border">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#1A1F2C]">Доставка и оплата</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Доставка и оплата</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-[#0EA5E9] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="Truck" size={32} className="text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Быстрая доставка</h3>
-              <p className="text-gray-600">По Москве — 1-2 дня, по России — 3-7 дней</p>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Быстрая доставка</h3>
+              <p className="text-muted-foreground">По Москве — 1-2 дня, по России — 3-7 дней</p>
             </div>
             <div className="text-center">
               <div className="bg-[#0EA5E9] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="CreditCard" size={32} className="text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Удобная оплата</h3>
-              <p className="text-gray-600">Наличными, картой или онлайн</p>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Удобная оплата</h3>
+              <p className="text-muted-foreground">Наличными, картой или онлайн</p>
             </div>
             <div className="text-center">
               <div className="bg-[#0EA5E9] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="ShieldCheck" size={32} className="text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Гарантия качества</h3>
-              <p className="text-gray-600">Все товары сертифицированы</p>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Гарантия качества</h3>
+              <p className="text-muted-foreground">Все товары сертифицированы</p>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="bg-[#1A1F2C] text-white py-8 mt-16">
+      <footer className="bg-[#0F1419] text-white py-8 mt-16 border-t border-border">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
@@ -423,11 +423,11 @@ const Index = () => {
                 <Icon name="Wrench" size={24} className="text-[#0EA5E9]" />
                 АвтоЗапчасть24
               </h3>
-              <p className="text-gray-400 text-sm">Качественные автозапчасти для вашего автомобиля</p>
+              <p className="text-muted-foreground text-sm">Качественные автозапчасти для вашего автомобиля</p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Контакты</h4>
-              <div className="space-y-2 text-sm text-gray-400">
+              <div className="space-y-2 text-sm text-muted-foreground">
                 <p className="flex items-center gap-2">
                   <Icon name="Phone" size={16} />
                   +7 (800) 123-45-67
@@ -440,11 +440,11 @@ const Index = () => {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Режим работы</h4>
-              <p className="text-sm text-gray-400">Пн-Пт: 9:00 - 20:00</p>
-              <p className="text-sm text-gray-400">Сб-Вс: 10:00 - 18:00</p>
+              <p className="text-sm text-muted-foreground">Пн-Пт: 9:00 - 20:00</p>
+              <p className="text-sm text-muted-foreground">Сб-Вс: 10:00 - 18:00</p>
             </div>
           </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+          <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
             © 2024 АвтоЗапчасть24. Все права защищены.
           </div>
         </div>
