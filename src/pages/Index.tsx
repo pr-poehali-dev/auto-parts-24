@@ -531,9 +531,9 @@ const Index = () => {
                   <Icon name="Phone" size={24} className="text-[#0EA5E9] mx-auto mb-2" />
                   <p className="text-sm font-semibold text-foreground">Телефоны</p>
                   <div className="text-xs text-muted-foreground mt-1 space-y-1">
-                    <p>+7 (800) 123-45-67</p>
-                    <p>+7 (495) 987-65-43</p>
-                    <p>+7 (916) 555-22-11</p>
+                    <a href="tel:+78001234567" className="block hover:text-[#0EA5E9] transition-colors">+7 (800) 123-45-67</a>
+                    <a href="tel:+74959876543" className="block hover:text-[#0EA5E9] transition-colors">+7 (495) 987-65-43</a>
+                    <a href="tel:+79165552211" className="block hover:text-[#0EA5E9] transition-colors">+7 (916) 555-22-11</a>
                   </div>
                 </CardContent>
               </Card>
@@ -555,22 +555,22 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Контакты</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p className="flex items-center gap-2">
+                <a href="tel:+78001234567" className="flex items-center gap-2 hover:text-[#0EA5E9] transition-colors">
                   <Icon name="Phone" size={16} />
                   +7 (800) 123-45-67
-                </p>
-                <p className="flex items-center gap-2">
+                </a>
+                <a href="tel:+74959876543" className="flex items-center gap-2 hover:text-[#0EA5E9] transition-colors">
                   <Icon name="Phone" size={16} />
                   +7 (495) 987-65-43
-                </p>
-                <p className="flex items-center gap-2">
+                </a>
+                <a href="tel:+79165552211" className="flex items-center gap-2 hover:text-[#0EA5E9] transition-colors">
                   <Icon name="Phone" size={16} />
                   +7 (916) 555-22-11
-                </p>
-                <p className="flex items-center gap-2">
+                </a>
+                <a href="mailto:info@avtozapchast24.ru" className="flex items-center gap-2 hover:text-[#0EA5E9] transition-colors">
                   <Icon name="Mail" size={16} />
                   info@avtozapchast24.ru
-                </p>
+                </a>
               </div>
             </div>
             <div>
