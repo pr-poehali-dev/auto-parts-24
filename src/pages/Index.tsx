@@ -165,7 +165,7 @@ const Index = () => {
               <a href="#catalog" className="hover:text-[#0EA5E9] transition-colors">Каталог</a>
               <a href="#promo" className="hover:text-[#0EA5E9] transition-colors">Акции</a>
               <a href="#team" className="hover:text-[#0EA5E9] transition-colors">Команда</a>
-              <a href="#delivery" className="hover:text-[#0EA5E9] transition-colors">Доставка</a>
+              <a href="#location" className="hover:text-[#0EA5E9] transition-colors">Контакты</a>
               <Sheet open={chatOpen} onOpenChange={setChatOpen}>
                 <SheetTrigger asChild>
                   <Button variant="outline" className="bg-[#0EA5E9] text-white border-0 hover:bg-[#0284C7]">
@@ -491,7 +491,54 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-[#0F1419] text-white py-8 mt-16 border-t border-border">
+      <section id="location" className="bg-card py-16 border-y border-border">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-4 text-foreground">Где нас найти</h2>
+          <p className="text-center text-muted-foreground mb-8">
+            Зеленоград, улица Шокина 1, строение 2
+          </p>
+          <div className="max-w-4xl mx-auto">
+            <Card className="overflow-hidden">
+              <CardContent className="p-0">
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?ll=37.215304%2C55.995685&mode=search&oid=1088080334&ol=biz&z=17"
+                  width="100%"
+                  height="400"
+                  frameBorder="0"
+                  allowFullScreen
+                  className="w-full"
+                  title="Карта местоположения"
+                ></iframe>
+              </CardContent>
+            </Card>
+            <div className="mt-6 grid md:grid-cols-3 gap-4">
+              <Card className="text-center">
+                <CardContent className="pt-6">
+                  <Icon name="MapPin" size={24} className="text-[#0EA5E9] mx-auto mb-2" />
+                  <p className="text-sm font-semibold text-foreground">Адрес</p>
+                  <p className="text-xs text-muted-foreground mt-1">Зеленоград, ул. Шокина 1, стр. 2</p>
+                </CardContent>
+              </Card>
+              <Card className="text-center">
+                <CardContent className="pt-6">
+                  <Icon name="Clock" size={24} className="text-[#0EA5E9] mx-auto mb-2" />
+                  <p className="text-sm font-semibold text-foreground">Режим работы</p>
+                  <p className="text-xs text-muted-foreground mt-1">Пн-Пт: 9:00-20:00, Сб-Вс: 10:00-18:00</p>
+                </CardContent>
+              </Card>
+              <Card className="text-center">
+                <CardContent className="pt-6">
+                  <Icon name="Phone" size={24} className="text-[#0EA5E9] mx-auto mb-2" />
+                  <p className="text-sm font-semibold text-foreground">Телефон</p>
+                  <p className="text-xs text-muted-foreground mt-1">+7 (800) 123-45-67</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-[#0F1419] text-white py-8 border-t border-border">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
