@@ -529,8 +529,12 @@ const Index = () => {
               <Card className="text-center">
                 <CardContent className="pt-6">
                   <Icon name="Phone" size={24} className="text-[#0EA5E9] mx-auto mb-2" />
-                  <p className="text-sm font-semibold text-foreground">Телефон</p>
-                  <p className="text-xs text-muted-foreground mt-1">+7 (800) 123-45-67</p>
+                  <p className="text-sm font-semibold text-foreground">Телефоны</p>
+                  <div className="text-xs text-muted-foreground mt-1 space-y-1">
+                    <p>+7 (800) 123-45-67</p>
+                    <p>+7 (495) 987-65-43</p>
+                    <p>+7 (916) 555-22-11</p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -554,6 +558,14 @@ const Index = () => {
                 <p className="flex items-center gap-2">
                   <Icon name="Phone" size={16} />
                   +7 (800) 123-45-67
+                </p>
+                <p className="flex items-center gap-2">
+                  <Icon name="Phone" size={16} />
+                  +7 (495) 987-65-43
+                </p>
+                <p className="flex items-center gap-2">
+                  <Icon name="Phone" size={16} />
+                  +7 (916) 555-22-11
                 </p>
                 <p className="flex items-center gap-2">
                   <Icon name="Mail" size={16} />
